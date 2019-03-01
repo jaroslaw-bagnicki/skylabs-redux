@@ -16,34 +16,34 @@ export default (state = initialState, action) => {
           ...state,
           {
             ...action.payload,
-            vote: 0
+            votes: 0
           }
         ]
 
     case REMOVE_COMMENT:
       return [
-        ...state.comments.filter(comment => comment.id !== action.payload.id)
+        ...state.filter(comment => comment.id !== action.payload.id)
       ]
       
     case EDIT_COMMENT:
       return [
-        ...state.comments.map(comment => {
+        ...state.map(comment => {
           if (comment.id === action.payload.id) comment.text = action.payload.text;
           return comment;
         })
       ]
     case VOTE_UP_COMMENT:
       return [
-        ...state.comments.map(comment => {
-          if (comment.id === action.payload.id) comment.vote = comment.vote + 1;
+        ...state.map(comment => {
+          if (comment.id === action.payload.id) comment.votes = comment.votes + 1;
           return comment;
         })
       ]
 
     case VOTE_DOWN_COMMENT:
       return [
-        ...state.comments.map(comment => {
-          if (comment.id === action.payload.id) comment.vote = comment.vote - 1;
+        ...state.map(comment => {
+          if (comment.id === action.payload.id) comment.votes = comment.votes - 1;
           return comment;
         })
       ]
