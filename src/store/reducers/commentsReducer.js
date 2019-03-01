@@ -4,7 +4,7 @@ import {
   EDIT_COMMENT,
   VOTE_UP_COMMENT,
   VOTE_DOWN_COMMENT
-} from '../reducers/comments';
+} from '../actions/commentActions';
 
 const initialState = [];
 
