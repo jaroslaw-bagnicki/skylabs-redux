@@ -21,7 +21,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  handleAddComment: () => dispatch(addComment(prompt()))
+  handleAddComment: () => {
+    const text = prompt('Enter Your comment');
+    if (text !== null) dispatch(addComment(text));
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CommentList);

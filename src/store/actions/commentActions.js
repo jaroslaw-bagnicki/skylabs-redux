@@ -21,7 +21,7 @@ export const removeComment = id => ({
   }
 });
 
-export const editComment = ({ id, text}) => ({
+export const editComment = (id, text) => ({
   type: EDIT_COMMENT,
   payload: {
     id,
