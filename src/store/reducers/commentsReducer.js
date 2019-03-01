@@ -32,6 +32,7 @@ export default (state = initialState, action) => {
           return comment;
         })
       ]
+
     case VOTE_UP_COMMENT:
       return [
         ...state.map(comment => {
