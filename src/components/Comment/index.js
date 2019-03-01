@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default ({text, votes}) => (
+export default ({text, vote}) => (
   <li>
-    {text} <span>votes: {votes}</span>
+    {text} <span>votes: {vote}</span>
   </li>
 )
