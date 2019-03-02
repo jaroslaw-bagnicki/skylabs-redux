@@ -1,8 +1,5 @@
 const initialState = [];
 
-export default (state, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
+export default (state = initialState, action) => {
+  return state;
 }
